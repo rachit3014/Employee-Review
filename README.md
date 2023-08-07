@@ -5,7 +5,8 @@
 A full stack app, in which there are two types of user
 - admin
 - employee
-Admin can assign the employees, to review each other on the basic of their work. The admin has a special power, to make any other employee as the new admin. Admin can also make the new employee, and they can also assign, the reviewer and review. The admin can see the current employee, and the admin can remove the employee. The employee can also see who reviews them. 
+
+- Admin can assign the employees, to review each other on the basic of their work. The admin has a special power, to make any other employee as the new admin. Admin can also make the new employee, and they can also assign, the reviewer and review. The admin can see the current employee, and the admin can remove the employee. The employee can also see who reviews them. 
 
 ## Technologies Used
 - NodeJS
