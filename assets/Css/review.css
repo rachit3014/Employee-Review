@@ -1,0 +1,15 @@
+/* for list _emp3 */
+
+.list_emp3 
+{
+    padding: 10px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:100%;
+    letter-spacing: 0.05em;
+    /* margin-bottom: 5px; */
+    font-size: 20px;
+
+}

@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="/Css/addreview.css">
+    <section class="wrapper">
+        <div class="review_section">
+            <h2>REVIEWS SECTION</h2>
+            <h4>To:</h4>
+            <form action="/review/add-review" method="post">
+                <select name="add_review"  required="true">
+                   
+                  <option selected disabled >choose any...</option>
+                    
+                    <% for (task of login_User.assign)  {%>
+                        <option value=<%=task.id%>><%= task.reviewto.name%>
+                            
+                        </option>    
+                        
+                     <%}%>
+    
+                </select> 
+               <textarea name="context" cols="30" rows="3" placeholder="Review" required="'true"></textarea>
+                 <button type="submit"> Add Review</button>
+            </form>
+        </div>
+        <div class="feddback">
+            <h4> Received Feedback:</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th> Requested By</th>
+                        <th> Requested To</th>
+                        <th class="review"> Review</th>
+                    </tr>
+                </thead>
+                <% for( k of login_User.recvied_feedback) {%>
+                    <tr class="data">
+                        <td><%= k.requested_feedback_by %></td>
+                        <td><%= k.review_from_emp %></td>
+                        <td><%= k.context %></td>
+                    </tr> 
+                    
+                <%}%>                                              
+    
+            </table>
+        </div>              
+
+    </section>
+
+

@@ -1,0 +1,48 @@
+
+<link rel="stylesheet" href="/Css/assign.css">
+ 
+    <h2>Set Review</h2>
+    <h4>From:</h4>
+    <form action="/admin/assign-review" method="post">
+        <select name="reviewfrom" required="true">
+            <option selected disabled >choose any...</option>
+            <% for (i of employee) {%>
+                <option value=<%= i.id%>><%= i.name%></option>
+            <%}%>   
+        </select>
+        <h4>To:</h4>
+        
+        <select name="reviewto" id=""required="true">
+            <option selected disabled >choose any...</option>
+            <% for( i of employee)   {%>
+                <option value=<%= i.id%>><%= i.name%></option>
+                
+                <%}%>
+
+        </select>
+        <button type="submit">Add Review</button>
+    </form>
+<!-- </div> -->
+<div class="feddback">
+    <h4> Review Assign:</h4>
+    <table>
+        <thead>
+            <tr>
+                <th> From</th>
+                <th> To</th>
+                <!-- <th class="review"> Review</th> -->
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <% for (k of assign_list ) {%>
+            <tr class="data">
+                <td> <%= k.reviewfrom.name %></td>
+                <td> <%= k.reviewto.name%></td>
+                <td><a href="/admin/delete/<%= k.id %>">Remove</a></td>
+            <%} %>
+
+        </tr>
+    </table>
+</div>
+
+

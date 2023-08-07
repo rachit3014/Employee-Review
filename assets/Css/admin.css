@@ -1,0 +1,163 @@
+/* for emp action */
+.emp_action
+{
+    display:flex;
+    margin-right: 42px;
+    width:50%;
+    flex-direction: column;
+    padding: 12px;
+}
+/* for button */
+.btns
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* employe action heading */
+.emp_action h2{
+    padding: 10px;
+    color: white;
+    /* margin-bottom: 5px; */
+    font-size: 20px;
+}
+/* for button inside btns class */
+.emp_action .btns button
+{
+    background-color: blue;
+    color:white;
+    padding: 20px;
+    /* outline: none; */
+    border: none;
+    margin:5px;
+    width: 250px;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    border-radius: 8px;
+    text-align: center;
+}
+/* for select inside emp_action class */
+.emp_action  select
+{
+    padding: 10px;
+    font-size: 20px;
+    width: 100%;
+    margin: 12px;
+    margin-top: 0px;
+    letter-spacing: 0.05em;
+    border-radius: 8px;
+}
+
+/* for button  inside emp_action class */
+.emp_action button
+
+{
+    background-color: blue;
+    color:white;
+    padding: 10px;
+    width:100%;
+    border: none;
+    margin:12px;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    border-radius: 8px;
+    text-align: center;
+
+}
+/* for button inside btns class */
+.emp_action .btns button
+{
+    background-color: blue;
+    color:white;
+    padding: 20px;
+    border: none;
+    margin:5px;
+    width: 250px;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* for review */
+.review
+{
+    
+    align-items: center;
+    text-align: center;
+    width: 14em;
+}
+/* welcome user */
+.review_section
+{
+  
+    display:flex;
+    margin-right: 42px;
+    width:50%;
+    flex-direction: column;
+    padding: 12px;
+}
+/* for review section button */
+.review_section button
+{
+    background-color: blue;
+    color:white;
+    padding: 10px;
+    border: none;
+    margin:12px;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    border-radius: 8px;
+    text-align: center;
+    width:100%
+}
+/* for textarea reviewsection */
+.review_section textarea
+{
+    padding:10px;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 12px;
+    letter-spacing: 0.05em;
+    border-radius:8px ;
+    width: 90%;
+}
+/* for select of review section */
+.review_section select
+{
+    padding: 10px;
+    font-size: 20px;
+    margin: 12px;
+    margin-top: 0px;
+    letter-spacing: 0.05em;
+    border-radius: 8px;
+    width: 100%;
+}
+/* for heading of review_section */
+.review_section h2
+{
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+
+}
+/* for feddback heading */
+.feddback h4
+{
+    padding-top: 20px;
+}
+
+/* for feedback table heading */
+.feddback table thead tr th
+{
+    width:5em;   
+}
+/* for review class */
+.feddback .review
+{
+    align-items: center;
+    text-align: center;
+    width: 14em;
+}

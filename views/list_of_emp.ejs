@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="/Css/list_of_emp.css">
+    <section class="wrapper">
+        <div class="list_emp3">
+            <h4> LIST OF EMPLOYEE</h4>
+            <a href="/admin/add-employee" style="color:white">
+            <h4>ADD </a>REMOVE</h4>
+        </div>
+
+        <div class="list_emp">
+            <table>
+                <thead>
+                    <tr>
+                        <th> Name</th>
+                        <th class="review"></thclass> Email</th>
+                        <th > Is Admin</th>
+                        <th > Remove</th>
+                    </tr>
+                </thead>
+                <% for(i of   list_of_emp)  {%>
+                    <tr class="data">
+                        <td> <%= i.name %></td>
+                        <td> <%= i.email %></td>
+                        <td> <%= i.isadmin %></td>
+                        <td> <a href="/user/delete-employee/<%= i.id%>">DELETE</a></td>
+                    </tr>
+                    
+                <%}%>
+
+    
+            </table>
+        </div>
+
+    </section>

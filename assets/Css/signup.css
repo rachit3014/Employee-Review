@@ -1,0 +1,231 @@
+*
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* for bods */
+bods
+{
+    background-color:#23242a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+/* for container */
+.container
+{
+    background: #1c1c1c;
+    position: relative;
+    width: 380px;
+    height: 520px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+/* pseudo-element before the element  class conatiner */
+.container::before
+{
+    content:'';
+    position: absolute;
+    width: 380px;
+    height: 420px;
+    top: -50%;
+    left:-50%;
+    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff
+    ,#45f3ff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+
+}
+/* for border line */
+.border_line
+{
+    position: absolute;
+    top:0;
+    inset: 0;
+
+}
+/* pseudo-element before the element  boder_line class */
+.border_line::before
+{
+    content:'';
+    position: absolute;
+    width: 380px;
+    height: 420px;
+    top: -50%;
+    left:-50%;
+    background: linear-gradient(0deg,transparent,transparent,#ff45fc,#86ff45
+    ,#86ff45);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+
+}
+/* pseudo-element after the element border_line class   */
+.border_line::after
+{
+    content:'';
+    position: absolute;
+    width: 380px;
+    height: 420px;
+    top: -50%;
+    left:-50%;
+    background: linear-gradient(0deg,transparent,transparent,#ff9345,#86ff45
+    ,#86ff45);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -4.5s;
+
+}
+/* to control the intermidate steps of animation */
+@keyframes animate
+
+{
+     /* style for start the animation */
+    0%
+    {
+        transform: rotate(0deg);
+    }
+     /* style for end the animation */
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+/* pseudo-element after the element conatiner class   */
+
+.container::after
+{
+    content:'';
+    position: absolute;
+    width: 380px;
+    height: 420px;
+    top: -50%;
+    left:-50%;
+    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff
+    ,#45f3ff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+
+}
+/* for container form */
+.container form
+{
+    border-radius: 9px;
+    background: #222;
+    inset: 4px;
+    z-index: 2;
+    padding: 50px 40px;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+
+}
+/*  for container heading */
+.container h2
+{
+    color: aliceblue;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+
+}
+/* for input box */
+.input_box
+{
+    margin-top: 35px;
+    width: 300px;
+    position: relative;
+}
+/* for input box input element */
+.input_box input
+{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    font-size: 1em;
+    transition: 0.5s;
+    z-index: 10;
+    background: transparent;
+    color: #23242a;
+}
+/* for input_box span element */
+.input_box span{
+    letter-spacing: 0.05em;
+    color: #8f8f8f;
+    pointer-events: none;
+    left: 0;
+    padding: 20px 0px 10px;
+    position: absolute;
+    transition: 0.5s;
+    font-size: 1em;
+}
+/* to span element that is a sibling of an input element inside an input_box element */
+.input_box input:valid ~span,
+.input_box input:focus ~span
+{
+    color: #fff;
+    font-size: 0.75em;
+    transform: translateY(-34px);
+
+}
+/* for input_box   */
+.input_box i{
+    left:0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    pointer-events: none;
+    transition: 0.5s;
+
+}
+/*  to select an element i that is a sibling of an input element inside an .input_box element, when the input element is focused */
+.input_box input:valid ~i,
+.input_box input:focus ~i
+{
+    height: 44px;
+}
+/* for link  */
+.link
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/* for anchor tag inside link class */
+.link a{
+   
+    margin: 10px 0px;
+    font-size: 1em;
+    text-decoration: none;
+    color: #fff;
+}
+/* for form of input type of submit  */
+form input[type="submit"]
+{
+    border: none;
+    outline: none;
+    padding: 9px 25px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 4px;
+    width: 100px;
+    margin-top: 10px;
+    font-weight: 600;
+
+}

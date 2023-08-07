@@ -1,0 +1,110 @@
+<link rel="stylesheet" href="/Css/admin.css">
+
+  <ti>
+    <section class="wrapper">
+        <div class="emp_action">
+            <h2>EMPLOYEE ACTIONS</h2>
+            <div class="btns">
+                <a href="/admin/employee-detail">
+                   <button type="submit">Edit</button>
+                </a>
+                <a href="/review/reviews">   
+                        <button type="submit">Reviews</button>
+                </a>
+                <a href="/admin/assign-emp">
+                        <button type="submit" style="background-color:grey;">Assign</button>
+                </a>
+            </div>
+                
+                
+            <h4>NAME</h4>
+
+                <form action="/admin/make-admin" method="post">
+                        <select name="emp_details" required="true" >
+                          <option selected disabled >choose any...</option>
+                          <!-- <option value=00></option> -->
+                            <% for (emp_details of emp_detail) {%>
+                                <% if (emp_details.isadmin==false ) {%>
+                                    <option value=<%= emp_details.id %>><%= emp_details.name %></option>
+                                    
+                                    
+                                    <%} %>
+                            <%} %>
+                        </select>
+                    <button type="submit">Make Admin</button>
+                    
+                </form>
+        </div>
+            <div class="list_emp">
+              <h4> LIST OF EMPLOYEE</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th> Name</th>
+                            <th class="review"> Email</th>
+                            <th > Is Admin</th>
+                        </tr>
+                    </thead>
+                    <% for (emp_details of emp_detail){%>
+                        <tr class="data">
+                            
+                            <td> <%= emp_details.name %></td>
+                            <td> <%= emp_details.email %></td>
+                            <td> <%= emp_details.isadmin %></td>
+                        </tr>
+                        
+                    <%} %>
+
+
+                </table>
+            </div>
+            
+                <div class="review_section">
+                    <h2>REVIEWS SECTION</h2>
+                    <h4>To:</h4>
+                    <!-- <%= login_user %> -->
+                    <form action="/review/add-review" method="post">
+                        <select name="add_review" >
+                    <option selected disabled >choose any...</option>
+
+                            <!-- <option >select cateogry</option> -->
+                            
+                            <% for (task of login_user.assign)  {%>
+                                <option value=<%=task.id%>><%= task.reviewto.name%>
+                                    
+                                </option>    
+                                
+                            <%}%>
+            
+                        </select> 
+                    <textarea name="context" cols="30" rows="3" placeholder="Review" required="true"></textarea>
+                        <button type="submit"> Add Review</button>
+                    </form>
+                </div>
+            
+            <div class="feddback">
+                <h4> Received Feedback:</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th> Requested By</th>
+                            <th> Requested To</th>
+                            <th class="review"> Review</th>
+                        </tr>
+                    </thead>
+                    <% for (feedback of login_user.recvied_feedback) {%>
+                        
+                        <tr class="data">
+                            <td> <%= feedback.requested_feedback_by %></td>
+                            <td> <%= feedback.review_from_emp %></td>
+                            <td><%= feedback.context %></td>
+                        </tr>
+
+                    <%}%>
+
+
+                </table>
+            </div>
+
+    </section>
+    

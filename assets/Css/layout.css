@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* for body */
+body
+{
+    background-color: #23242a;
+    width: 100%;
+    height: 100%;
+}
+/* for navbar */
+.navbar
+{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+/* for heading */
+.heading
+{
+    color: blue;
+    margin:14px;
+    font-size: 2em;
+}
+/* for head_title */
+.head_title
+{
+    color: white;
+    margin:14px;
+    letter-spacing: 0.05em;
+}
+/* for wrapper */
+.wrapper
+{
+    width: 95%;
+    margin: 15px;
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+
+}
+/* for heading  */
+h4
+{
+    padding: 10px;
+    color: white;
+    letter-spacing: 0.05em;
+    /* margin-bottom: 5px; */
+    font-size: 20px;
+
+}
+/* for table */
+table{
+    margin: 12px;
+
+    border:solid;
+
+    border: none;
+    
+    box-shadow: 5px 5px 5px 10px #0ac5e1;
+    
+}
+/* for table cell */
+ td{
+    padding: 15px;
+    text-align: center;
+    color: white;
+    letter-spacing: 0.05em;
+
+
+    background-color: black;
+    
+}
+/* for table head */
+table thead
+{
+    color: white;
+    background-color: rgb(42, 42, 42);
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    
+}
+/* for table row head */
+table thead tr th{
+    padding: 20px;
+    width:22em;
+    text-align: center;
+}
+/* for anchor tag */
+a{
+    text-decoration: none;
+    color: red;
+}

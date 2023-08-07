@@ -1,0 +1,27 @@
+
+<link rel="stylesheet" href="/Css/review.css">
+    <section class="wrapper">
+        <div class="feddback">
+            <h4> Received Feedback:</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th> From</th>
+                        <th> To</th>
+                        <th class="review"> Review</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <% for (k of feedback ) {%>
+                    <tr class="data">
+                        <td> <%= k.review_from_emp %></td>
+                        <td> <%= k.review_to_emp%></td>
+                        <td> <%= k.context %></td>
+                        <td><a href="/review/delete-feedback/<%= k.id %>">Remove</a></td>
+                    <%} %>
+   
+                </tr>
+            </table>
+        </div>
+
+    </section>

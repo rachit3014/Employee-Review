@@ -1,0 +1,25 @@
+<% if(locals.user) {%>
+    <nav class="navbar">
+        <div class="heading">
+            <a href="/user/home" style="color:blue">
+            <i class="fa-solid fa-magnifying-glass"> </i>  <span> Employee Review</span>
+        </a>
+        </div>
+        <div class="head_title">
+            <span><%=user.name%></span>
+            <span><a href="/user/sign-out" style='color:white;'> &nbspSign out</a></span>
+        </div>
+    </nav>
+    <%}else {%>
+        <nav class="navbar">
+            <div class="heading">
+            </div>
+            <div class="head_title">
+          
+            </div>
+        </nav>
+    
+    
+    
+        <%}%> 
+
